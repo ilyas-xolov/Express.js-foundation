@@ -1,0 +1,34 @@
+.ellipsis-line {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+.ellipsis-line.one {
+    -webkit-line-clamp: 1;
+}
+.ellipsis-line.two {
+    -webkit-line-clamp: 2;
+}
+.ellipsis-line.three {
+    -webkit-line-clamp: 3;
+}
+.ellipsis-line.four {
+    -webkit-line-clamp: 4;
+}
+.ellipsis-line.five {
+    -webkit-line-clamp: 5;
+}
+.avatar {
+    background-color: #212529;
+    padding: 3px .5rem;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-bottom: 0;
+    font-size: 14px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

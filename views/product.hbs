@@ -1,0 +1,17 @@
+<div class="w-100 d-flex gap-4">
+    <img src="{{image}}" alt="course image" class="course-image">
+    <div class="info-container">
+        <h4><b>{{name}}</b></h4> 
+        <p>created at: <b>{{convertDate createdAt}}</b></p>
+        <p>price: <b>{{price}}.00$</b></p><hr> 
+        <p>{{description}}</p>
+    </div>
+    <style>
+        .course-image{
+            width: 50%;
+            max-height: 80vh;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+    </style>
+</div>

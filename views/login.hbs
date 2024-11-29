@@ -1,0 +1,38 @@
+<form action="/login" method="post" class="sign-in-form">
+    <div class="w-25">
+        <h2 class="title mb-5 w-100 text-center">Sign In</h2>
+        {{#if loginError}}
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>Error!</strong> {{loginError}}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        {{/if}}
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" name="email" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Email address</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="password" class="form-control" name="password" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Password</label>
+        </div>
+        <button type="submit" class="w-100 btn btn-dark p-3">Sign In</button>
+    </div>
+</form>
+<style>
+    .sign-in-form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+    }
+</style>
+{{!-- <script>
+    function errorTranslate(msg){
+        if(msg == 'invalid.password.OR.email'){
+            return 'Invalid email or password'
+        }
+        if(msg == 'require.password.OR.email'){
+            return 'Require email and password';
+        }
+    }
+</script> --}}

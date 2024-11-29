@@ -1,0 +1,48 @@
+<form action="/edit-product/{{_id}}" method="post" class="sign-in-form">
+    <div class="w-75">
+        <h2 class="title mb-5 w-100 justify-content-center d-flex gap-3 ellipsis-line one text-dark ellipsis-line one"><p class="text-muted">Edit course: </p>{{name}}</h2>
+        {{#if errorEditProduct}}
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>Error!</strong> {{errorEditProduct}}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        {{/if}}
+        <div class="d-flex">
+            <div class="form-floating m-2 w-50">
+                <input type="text" value="{{name}}" class="form-control" name="name" id="floatingname">
+                <label for="floatingname">Course name</label>
+            </div>
+            <div class="form-floating m-2 w-25">
+                <input type="text" value="{{image}}" class="form-control" name="image" placeholder="image" id="description">
+                <label for="description">Image</label>
+            </div>
+            <div class="input-group m-2 w-25">
+                <span class="input-group-text">$</span>
+                <div class="form-floating">
+                    <input type="number" value="{{price}}" class="form-control" name="price" id="price" placeholder="price">
+                    <label for="price">Price</label>
+                </div>
+            </div>
+        </div>
+        <div class="form-floating m-2">
+            <textarea class="form-control" name="description" id="description" style="height: 100px">{{description}}</textarea>
+            <label for="description">Description</label>
+        </div>
+        <button type="submit" class="w-100 btn btn-dark p-3">Save</button>
+    </div>
+</form>
+<style>
+    .sign-in-form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+    }
+    .form-floating textarea {
+        min-height: 100px; 
+        resize: none;
+    }
+    .input-group .form-floating {
+        width: calc(100% - 35px);
+    }
+</style>

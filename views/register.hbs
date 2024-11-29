@@ -1,0 +1,41 @@
+<form action="/register" method="post" class="sign-in-form">
+    <div class="wrapper">
+        <h2 class="title mb-5 w-100 text-center">Sign Up</h2>
+        {{#if registerError}}
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>Error!</strong> {{registerError}}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        {{/if}}
+        <div class="d-flex">
+            <div class="form-floating mb-3 me-3 w-50">
+                <input type="text" class="form-control" name="firstName" id="floatingFirstName" placeholder="Alex">
+                <label for="floatingFirstName">First name</label>
+            </div>
+            <div class="form-floating mb-3 w-50">
+                <input type="text" class="form-control" name="lastName" id="floatingLastName" placeholder="Oxao">
+                <label for="floatingLastName">Last name</label>
+            </div>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" name="email" id="floatingEmail" placeholder="name@example.com">
+            <label for="floatingEmail">Email address</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="password" class="form-control" name="password" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Password</label>
+        </div>
+        <button type="submit" class="w-100 btn btn-dark p-3">Sign In</button>
+    </div>
+</form>
+<style>
+    .sign-in-form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+    }
+    .sign-in-form .wrapper {
+        width: 45%;
+    }
+</style>

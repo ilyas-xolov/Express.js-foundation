@@ -1,0 +1,31 @@
+<div>
+    {{#if myProducts.length}}
+        <div class="d-flex flex-wrap">
+            {{#each myProducts}}
+                <div class="card m-2">
+                    <img src="{{image}}" class="card-img-top object-fit-cover" style="max-height: 13rem; object-fit: cover;" alt="course img">
+                    <div class="card-body">
+                        <h5 class="card-title">{{name}}</h5>
+                        <p class="ellipsis-line two">{{description}}</p>
+                    </div>
+                    <div class="card-footer p-3">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center gap-2">
+                                <p class="avatar">{{avatarFormat user_id.firstName user_id.lastName}}</p>
+                                <p class="mb-0 ">{{user_id.firstName}} {{user_id.lastName}}</p>
+                            </div>
+                            <p class="text-muted text-end fs-5 mb-0">{{price}}.00$</p>
+                        </div>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    {{else}}
+        <p>Products not found </p>
+    {{/if}}
+    <style>
+        .card.m-2 {
+            width: calc(25% - 1rem);
+        }
+    </style>
+</div>

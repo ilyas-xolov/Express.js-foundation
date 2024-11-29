@@ -1,0 +1,45 @@
+<header>
+  <div class="d-flex flex-column flex-md-row align-items-center mb-4 border-bottom py-3 px-2">
+    <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+      <img src="/favicon.svg" width="40" class="me-3">
+      <span class="fs-4">Course placement</span>
+    </a>
+
+    <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+      {{#if isProducts}}
+        <a class="me-3 py-2 text-dark" href="/products">My products</a>
+      {{else}}  
+        <a class="me-3 py-2 text-dark text-decoration-none" href="/products">My products</a>
+      {{/if}}
+
+      {{#if isNewAdd}}
+        <a class="me-3 py-2 text-dark" href="/new-add">New add</a>
+      {{else}}
+        <a class="me-3 py-2 text-dark text-decoration-none" href="/new-add">New add</a>
+      {{/if}}
+
+      <div class="btn-group">
+        {{#if token}}
+          <a class="btn btn-outline-dark" href="/logout"> Sign Out</a>
+        {{else}}
+          {{#if isLogin}} 
+            <a class="btn btn-dark active" href="/login">Sign in</a>
+          {{else}} 
+            <a class="btn btn-dark" href="/login">Sign in</a>
+          {{/if}}
+
+          {{#if isRegister}}
+            <a class="btn btn-dark active" href="/register">Sign up</a>
+          {{else}} 
+            <a class="btn btn-dark" href="/register">Sign up</a>
+          {{/if}}
+        {{/if}}
+      </div>
+    </nav>
+  </div> 
+  <style>
+    .btn-outline-dark:hover .text-dark {
+      color: white !important;
+    }
+  </style>
+</header>
